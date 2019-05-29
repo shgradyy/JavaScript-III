@@ -44,6 +44,7 @@ function CharacterStats(charAttribute) {
 }
 Game.prototype = Object.create(CharacterStats.destroy);
 
+
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
   * team
@@ -59,7 +60,8 @@ function Humanoid(humAttr) {
   this.language = humAttr.language;
   CharacterStats.call(this, Humanoid);
   this.greet = function() {
-    return console.log(`Hello ${this.name}`);
+    console.log(`Hello ${this.name}`);
+    console.log(this);
    }
 } 
 Game.prototype = Object.create(Humanoid.greet);
